@@ -16,3 +16,6 @@ Every lesson there will be a new branch with the relevant code for that lesson.
 ```
 git checkout -b lesson-3-intro-to-react
 ```
+
+## Location
+Every week in Berlin on Thursday
