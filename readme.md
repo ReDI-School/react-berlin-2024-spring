@@ -10,6 +10,20 @@ To actively participate in the coding exercises during class, you'll need to clo
 git clone https://github.com/ReDI-School/react-berlin-2024-spring.git
 ```
 
+## Running the project
+
+To run this project, you need to first download and install all the dependences.
+
+```
+ npm install
+```
+
+Then, you can run your development server and access your application via browser (default [http://localhost:5173/](http://localhost:5173/)).
+
+```
+  npm run dev
+```
+
 ## Branches
 Every lesson there will be a new branch with the relevant code for that lesson.
 
