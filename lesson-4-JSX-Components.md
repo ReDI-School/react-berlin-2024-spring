@@ -228,4 +228,68 @@ const props = {
 };
 ```
 
+Inside the component `<MyComponent/>`, the props received will look like this
+
+```jsx
+function MyComponent(props) {
+  return (
+    <div>
+      <p>My Name is {props.name}</p>
+      <p>I was born in {props.hometown}</p>
+    </div>
+  );
+}
+export default MyComponent;
+```
+
+Since `props` is an object, if we prefer, we can use destructuring to access the name of the properties directly.
+
+```jsx
+function MyComponent({name, hometown}) {
+  return (
+    <div>
+      <p>My Name is {name}</p>
+      <p>I was born in {hometown}</p>
+    </div>
+  );
+}
+export default MyComponent;
+```
+
 I like to demonstrate this in a single file to hopefully help you understand why passing data **downstream** works, but passing data back **upstream** doesn't. You have to think carefully about the structure of your project to make sure all Components that need certain data are able to access it. Later, we'll learn some different ways to pass data that sidestep this limitation, but for this exercise concentrate on where data is coming from, where you're using it, and how it's being passed from A to B.
+
+- How to pass data **upstream** :
+  
+  First we need to create a function in the parent component, that receives as parameter the data that will be sent from the child component.
+
+  ```jsx
+  function ParentComponent() {
+      const getDataFromChild = (data) => {
+        console.log(data);
+      };
+      return (
+        <div>
+          <ChildComponent getDataFromChild={getDataFromChild } />
+        </div>
+      );
+    }
+  export default ParentComponent;
+  ```
+
+In `ChildComponent` we receive the function `getDataFromChild` as props, and we call it using an event (click, hover, etc...).
+
+  ```jsx
+    function ChildComponent({getDataFromChild}) {
+      const sendData = () => {
+        getDataFromChild("Hello parent component!")
+      };
+      return (
+        <div>
+          <button onClick={sendData} />
+        </div>
+      );
+    }
+    export default ChildComponent;
+  ```
+
+The string `Hello Parent component` will be printed to the console, thanks to the `console.log(data)` we have in the parent component, hence the data traveled **upstream** from `ChildComponent` to `ParentComponent`.
