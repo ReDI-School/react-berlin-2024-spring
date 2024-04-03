@@ -18,7 +18,7 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 .red {
-  color: red;
+  color: #29b6f6;
 }
 
 @keyframes logo-spin {
