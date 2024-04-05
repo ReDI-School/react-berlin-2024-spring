@@ -1,7 +1,8 @@
 import React from "react";
 
-function Text(props) {
-  return <p>{props.text}</p>;
+function Text({ myMeal }) {
+  // console.log("props in Text :>> ", props);
+  return <p>{myMeal} is the speciality from ...</p>;
 }
 
 export default Text;
