@@ -12,7 +12,7 @@ git clone https://github.com/ReDI-School/react-berlin-2024-spring.git
 
 ## Running the project
 
-To run this project, you need to first download and install all the dependences.
+To run this project, you need to first download and install all the dependencies.
 
 ```
  npm install
@@ -30,6 +30,3 @@ Every lesson there will be a new branch with the relevant code for that lesson.
 ```
 git checkout -b lesson-3-intro-to-react
 ```
-
-## Location
-Every week in Berlin on Thursday
