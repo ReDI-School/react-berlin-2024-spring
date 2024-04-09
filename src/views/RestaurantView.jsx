@@ -2,34 +2,27 @@ import './RestaruantView.css'
 import spaghettiImage from "../assets/spaghetti.jpg"
 import lasagnaImage from "../assets/lasagna.jpg"
 import risottoImage from "../assets/risotto.jpg"
+import {useState} from "react";
+import Cart from "../components/Cart.jsx";
+import MenuItem from "../components/MenuItem.jsx";
 
 const RestaurantView = () => {
-  const selectedMenuItem = "empty"
+  const [selectedMenuItem, setSelectedMenuItem] = useState("empty")
+
+  const onMenuItemClicked = (name) => {
+    setSelectedMenuItem(name)
+  }
 
   return (
     <>
       <h1>
         REDI React Restaurant
       </h1>
-      <div className="cart">
-        Your Cart: {selectedMenuItem}
-      </div>
+      <Cart selectedMenuItem={selectedMenuItem}/>
       <div className="menu">
-        <li className="menuItem">
-          <h3>Spaghetti</h3>
-          <img src={spaghettiImage} alt="Spaghetti"/>
-          <button>Add To Cart</button>
-        </li>
-        <li className="menuItem">
-          <h3>Lasagna</h3>
-          <img src={lasagnaImage} alt="Lasagna"/>
-          <button>Add To Cart</button>
-        </li>
-        <li className="menuItem">
-          <h3>Risotto</h3>
-          <img src={risottoImage} alt="Risotto"/>
-          <button>Add To Cart</button>
-        </li>
+        <MenuItem name="Spaghetti" image={spaghettiImage} onClick={onMenuItemClicked}/>
+        <MenuItem name="Lasagna" image={lasagnaImage} onClick={onMenuItemClicked}/>
+        <MenuItem name="Risotto" image={risottoImage} onClick={onMenuItemClicked}/>
       </div>
     </>
   )
