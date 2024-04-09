@@ -5,7 +5,7 @@
  * */
 import {useState} from "react"
 
-function Lesson7Exercise3() {
+const Lesson7Exercise3 = () => {
   const [count, setCount] = useState(0)
   const incrementCount = () => {
     setCount(count + 2)

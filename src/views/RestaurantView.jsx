@@ -3,7 +3,7 @@ import spaghettiImage from "../assets/spaghetti.jpg"
 import lasagnaImage from "../assets/lasagna.jpg"
 import risottoImage from "../assets/risotto.jpg"
 
-function RestaurantView() {
+const RestaurantView = () => {
   const selectedMenuItem = "empty"
 
   return (
