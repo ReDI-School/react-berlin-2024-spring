@@ -17,17 +17,17 @@ const RestaurantView = () => {
       <div className="menu">
         <li className="menuItem">
           <h3>Spaghetti</h3>
-          <img src={spaghettiImage} className="logo react" alt="React logo" />
+          <img src={spaghettiImage} alt="Spaghetti"/>
           <button>Add To Cart</button>
         </li>
         <li className="menuItem">
           <h3>Lasagna</h3>
-          <img src={lasagnaImage} className="logo react" alt="React logo" />
+          <img src={lasagnaImage} alt="Lasagna"/>
           <button>Add To Cart</button>
         </li>
         <li className="menuItem">
           <h3>Risotto</h3>
-          <img src={risottoImage} className="logo react" alt="React logo" />
+          <img src={risottoImage} alt="Risotto"/>
           <button>Add To Cart</button>
         </li>
       </div>
