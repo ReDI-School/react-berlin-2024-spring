@@ -5,7 +5,7 @@ import risottoImage from '../assets/risotto.jpg';
 import { useState } from 'react';
 import Cart from '../components/Cart.jsx';
 import MenuItem from '../components/MenuItem.jsx';
-import Lesson8 from '../exercises/lesson8/Lesson8.jsx';
+import Lesson8Solution from '../exercises/lesson8/Lesson8Solution';
 
 /**
  * INSTRUCTIONS:
@@ -49,7 +49,7 @@ const RestaurantView = () => {
           onClick={onMenuItemClicked}
         />
       </div>
-      <Lesson8 />
+      <Lesson8Solution />
     </>
   );
 };
