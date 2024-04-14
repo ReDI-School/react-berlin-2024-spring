@@ -5,7 +5,6 @@ import risottoImage from '../assets/risotto.jpg';
 import { useState } from 'react';
 import Cart from '../components/Cart.jsx';
 import MenuItem from '../components/MenuItem.jsx';
-import Lesson8Solution from '../exercises/lesson8/Lesson8Solution';
 
 /**
  * INSTRUCTIONS:
@@ -22,34 +21,48 @@ import Lesson8Solution from '../exercises/lesson8/Lesson8Solution';
  */
 
 const RestaurantView = () => {
-  const [selectedMenuItem, setSelectedMenuItem] = useState('empty');
+  const [selectedItems, setSelectedItems] = useState([]);
 
-  const onMenuItemClicked = (name) => {
-    setSelectedMenuItem(name);
+  const handleMenuClick = (name) => {
+    let nextItems;
+
+    if (selectedItems.includes(name)) {
+      nextItems = selectedItems.filter((item) => item !== name);
+    } else {
+      nextItems = [...selectedItems, name];
+    }
+
+    setSelectedItems(nextItems);
   };
 
   return (
     <>
-      <h1>ReDI React Restaurant</h1>
-      <Cart selectedMenuItem={selectedMenuItem} />
+      <h1 style={{ textAlign: 'center' }}>ReDI React Restaurant</h1>
+      <Cart
+        selectedItems={selectedItems}
+        onClear={() => setSelectedItems([])}
+      />
       <div className="menu">
         <MenuItem
           name="Spaghetti"
           image={spaghettiImage}
-          onClick={onMenuItemClicked}
+          onClick={handleMenuClick}
+          isSelected={selectedItems.includes('Spaghetti')}
         />
         <MenuItem
           name="Lasagna"
           image={lasagnaImage}
-          onClick={onMenuItemClicked}
+          onClick={handleMenuClick}
+          isSelected={selectedItems.includes('Lasagna')}
         />
         <MenuItem
           name="Risotto"
           image={risottoImage}
-          onClick={onMenuItemClicked}
+          onClick={handleMenuClick}
+          isSelected={selectedItems.includes('Risotto')}
         />
       </div>
-      <Lesson8Solution />
+      {selectedItems.length === 3 && <h4>🎉 You unlocked a 10% discount!</h4>}
     </>
   );
 };
