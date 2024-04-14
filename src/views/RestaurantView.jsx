@@ -5,7 +5,7 @@ import Cart from "../components/Cart.jsx";
 import MenuItem from "../components/MenuItem.jsx";
 import dishes from "../mocks/dishes.json";
 
-const RestaurantViewWithMock = () => {
+const RestaurantView = () => {
   const [selectedItems, setSelectedItems] = useState([]);
 
   const handleMenuClick = (name) => {
@@ -43,4 +43,4 @@ const RestaurantViewWithMock = () => {
   );
 };
 
-export default RestaurantViewWithMock;
+export default RestaurantView;
