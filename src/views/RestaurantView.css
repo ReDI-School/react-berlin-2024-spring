@@ -36,6 +36,8 @@ body {
   width: auto; /* Make image take up full card width */
   height: auto; /* Keep image aspect ratio */
   display: block; /* Ensures no extra space below the image */
+  object-fit: cover; /* Cover the entire card with the image prevents to distort image */
+  aspect-ratio: 2 / 1; /* Maintain a aspect ratio */
 }
 
 .menuItem button {
@@ -50,6 +52,7 @@ body {
   border-bottom-left-radius: 10px; /* Match the card's bottom left radius */
   border-bottom-right-radius: 10px; /* Match the card's bottom right radius */
   transition: background-color 0.3s; /* Smooth transition for hover effect */
+
   &.selected {
     background-color: #f03636;
   }
@@ -57,6 +60,7 @@ body {
 
 .menuItem button:hover {
   background-color: #0056b3;
+
   &.selected {
     background-color: #d90909;
   } /* Darker shade when hovering over button */
