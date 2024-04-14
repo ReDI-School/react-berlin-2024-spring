@@ -1,14 +1,16 @@
-const MenuItem = ({name, image, onClick}) => {
+const MenuItem = ({ name, image, onClick, isSelected }) => {
   return (
     <li className="menuItem">
       <h3>{name}</h3>
-      <img src={image} alt={name}/>
-      <button onClick={() => {
-        onClick(name)
-      }}>Add To Cart
+      <img src={image} alt={name} />
+      <button
+        className={isSelected ? 'selected' : ''}
+        onClick={() => onClick(name)}
+      >
+        {isSelected ? 'Remove From Cart' : 'Add To Cart'}
       </button>
     </li>
-  )
-}
+  );
+};
 
-export default MenuItem
+export default MenuItem;

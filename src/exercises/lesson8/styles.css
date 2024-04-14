@@ -1,0 +1,15 @@
+.flex-container {
+  display: flex;
+  height: 40px;
+  gap: 16px;
+  margin-top: 50px;
+  & input {
+    padding: 4px 12px;
+    font-size: 20px;
+  }
+}
+
+.warning {
+  color: red;
+  text-align: left;
+}

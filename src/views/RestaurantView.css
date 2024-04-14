@@ -50,8 +50,21 @@ body {
   border-bottom-left-radius: 10px; /* Match the card's bottom left radius */
   border-bottom-right-radius: 10px; /* Match the card's bottom right radius */
   transition: background-color 0.3s; /* Smooth transition for hover effect */
+  &.selected {
+    background-color: #f03636;
+  }
 }
 
 .menuItem button:hover {
-  background-color: #0056b3; /* Darker shade when hovering over button */
+  background-color: #0056b3;
+  &.selected {
+    background-color: #d90909;
+  } /* Darker shade when hovering over button */
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px 0;
 }
