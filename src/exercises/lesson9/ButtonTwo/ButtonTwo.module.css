@@ -1,0 +1,27 @@
+.button {
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  padding-inline: 30px;
+  padding-block: 20px;
+  background-color: blueviolet;
+
+  &:hover {
+    background-color: #f0f0f0;
+    color: black;
+    border: none;
+  }
+}
+
+.button_secondary {
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  padding-inline: 30px;
+  padding-block: 20px;
+  background-color: #F0F;
+
+  &:hover {
+    background-color: #f0f0f0;
+    color: black;
+    border: none;
+  }
+}

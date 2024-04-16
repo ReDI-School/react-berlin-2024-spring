@@ -1,0 +1,74 @@
+[
+  {
+    "image": "/images/carbonara.jpg",
+    "name": "Spaghetti Carbonara",
+    "description": "Classic Italian pasta dish made with eggs, cheese, pancetta, and black pepper.",
+    "price": 12.99
+  },
+  {
+    "image": "/images/margherita.jpg",
+    "name": "Margherita Pizza",
+    "description": "Traditional Neapolitan pizza topped with tomato sauce, mozzarella cheese, and fresh basil.",
+    "price": 9.99
+  },
+  {
+    "image": "/images/lasagna.jpg",
+    "name": "Lasagna",
+    "description": "Layers of pasta, meat sauce, and cheese baked to perfection.",
+    "price": 14.99
+  },
+  {
+    "image": "/images/risotto.jpg",
+    "name": "Risotto alla Milanese",
+    "description": "Creamy Italian rice dish flavored with saffron and Parmesan cheese.",
+    "price": 10.99
+  },
+  {
+    "image": "/images/bruschetta.jpg",
+    "name": "Bruschetta",
+    "description": "Toasted bread topped with fresh tomatoes, garlic, basil, and olive oil.",
+    "price": 6.99
+  },
+  {
+    "image": "/images/tiramisu.jpg",
+    "name": "Tiramisu",
+    "description": "Classic Italian dessert made with layers of ladyfingers, coffee, mascarpone cheese, and cocoa.",
+    "price": 7.99
+  },
+  {
+    "image": "/images/caprese-salad.jpg",
+    "name": "Caprese Salad",
+    "description": "Simple salad made with fresh tomatoes, mozzarella cheese, basil, and olive oil.",
+    "price": 8.99
+  },
+  {
+    "image": "/images/pesto-pasta.jpg",
+    "name": "Pesto Pasta",
+    "description": "Pasta tossed in a flavorful sauce made with basil, garlic, pine nuts, Parmesan cheese, and olive oil.",
+    "price": 11.99
+  },
+  {
+    "image": "/images/osso-bucco.jpg",
+    "name": "Osso Buco",
+    "description": "Braised veal shanks cooked with vegetables, white wine, and broth.",
+    "price": 16.99
+  },
+  {
+    "image": "/images/cannoli.jpg",
+    "name": "Cannoli",
+    "description": "Italian pastry filled with sweet ricotta cheese and chocolate chips.",
+    "price": 5.99
+  },
+  {
+    "image": "/images/minestrone-soup.jpg",
+    "name": "Minestrone Soup",
+    "description": "Hearty vegetable soup made with a variety of vegetables, beans, and pasta.",
+    "price": 7.99
+  },
+  {
+    "image": "/images/chicken-parmesan.jpg",
+    "name": "Chicken Parmesan",
+    "description": "Breaded chicken cutlets topped with tomato sauce and melted cheese.",
+    "price": 13.99
+  }
+]

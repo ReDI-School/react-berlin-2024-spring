@@ -1,11 +1,8 @@
-import './App.css'
+import "./App.css";
 import RestaurantView from "./views/RestaurantView.jsx";
 
-
 function App() {
-  return (
-    <RestaurantView/>
-  )
+  return <RestaurantView />;
 }
 
-export default App
+export default App;

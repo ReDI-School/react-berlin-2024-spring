@@ -36,30 +36,8 @@ body {
   width: auto; /* Make image take up full card width */
   height: auto; /* Keep image aspect ratio */
   display: block; /* Ensures no extra space below the image */
-}
-
-.menuItem button {
-  background-color: #007bff; /* Example button color */
-  color: white; /* Text color for the button */
-  border: none; /* Remove default border */
-  padding: 10px 20px; /* Padding inside the button */
-  text-transform: uppercase; /* Stylistic choice for uppercase text */
-  font-weight: bold; /* Bold font for button text */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  width: 100%; /* Make the button as wide as the card */
-  border-bottom-left-radius: 10px; /* Match the card's bottom left radius */
-  border-bottom-right-radius: 10px; /* Match the card's bottom right radius */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
-  &.selected {
-    background-color: #f03636;
-  }
-}
-
-.menuItem button:hover {
-  background-color: #0056b3;
-  &.selected {
-    background-color: #d90909;
-  } /* Darker shade when hovering over button */
+  object-fit: cover; /* Cover the entire card with the image prevents to distort image */
+  aspect-ratio: 2 / 1; /* Maintain a aspect ratio */
 }
 
 .cart {
