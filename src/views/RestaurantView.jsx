@@ -38,7 +38,7 @@ const RestaurantView = () => {
           />
         ))}
       </div>
-      {selectedItems.length === 3 && <h4>🎉 You unlocked a 10% discount!</h4>}
+      {selectedItems.length >= 3 && <h4>🎉 You unlocked a 10% discount!</h4>}
     </>
   );
 };

@@ -9,17 +9,16 @@
  * 5. implement the css module in the `Button` component.
  */
 
+import Button from "./Button/Button";
+
 const MenuItem = ({ name, image, onClick, isSelected }) => {
   return (
     <div className="menuItem">
       <h3>{name}</h3>
       <img src={image} alt={name} />
-      <button
-        className={isSelected ? "selected" : ""}
-        onClick={() => onClick(name)}
-      >
+      <Button onClick={onClick} isSelected={isSelected} name={name}>
         {isSelected ? "Remove From Cart" : "Add To Cart"}
-      </button>
+      </Button>
     </div>
   );
 };

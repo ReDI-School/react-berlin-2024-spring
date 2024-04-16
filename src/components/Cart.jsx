@@ -11,4 +11,5 @@ const Cart = ({ selectedItems, onClear }) => {
     </div>
   );
 };
+
 export default Cart;
