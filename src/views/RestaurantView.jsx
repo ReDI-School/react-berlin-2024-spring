@@ -25,13 +25,14 @@ const RestaurantView = () => {
     <>
       <NavBar>
         <h1>ReDI React Restaurant</h1>
-      </NavBar>
 
-      <div className={styles.restaurantWrapper}>
         <Cart
           selectedItems={selectedItems}
           onClear={() => setSelectedItems([])}
         />
+      </NavBar>
+
+      <div className={styles.restaurantWrapper}>
         <div className={styles.menu}>
           {dishes.map((dish) => (
             <MenuItem
