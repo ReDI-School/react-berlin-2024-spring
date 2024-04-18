@@ -1,5 +1,9 @@
 const lesson10 = () => {
-  return <div>lesson10</div>;
+  return (
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <input type="text" />
+    </div>
+  );
 };
 
 export default lesson10;

@@ -23,6 +23,7 @@ const RestaurantView = () => {
     setSelectedItems(nextItems);
   };
 
+  // create the >>filter<< of your dishes state here
   const handleDishesFilter = (query) => {
     console.log(query);
   };

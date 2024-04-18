@@ -20,7 +20,11 @@ const SearchField = ({ filterDishes }) => {
 
   return (
     <div>
-      <input className={searchClasses.join(" ")} type="text" />
+      <input
+        className={searchClasses.join(" ")}
+        placeholder="Filter dishes..."
+        type="text"
+      />
     </div>
   );
 };
