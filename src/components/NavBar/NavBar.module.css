@@ -1,0 +1,21 @@
+.navBar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  
+}
+
+.navBarContentWrapper {
+  max-width: 1080px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.navBar h1 {
+  font-size: 20px;
+}

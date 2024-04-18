@@ -1,0 +1,15 @@
+
+.restaurantWrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.menu {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Use flexbox for better alignment and distribution */
+  flex-wrap: wrap; /* Allow wrapping for multiple items */
+  gap: 20px; /* Space between each menu item/card */
+  justify-content: center; /* Center the cards in the menu container */
+}

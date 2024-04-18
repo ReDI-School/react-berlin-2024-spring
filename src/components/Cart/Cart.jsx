@@ -1,6 +1,8 @@
+import styles from "./Cart.module.css";
+
 const Cart = ({ selectedItems, onClear }) => {
   return (
-    <div className="cart">
+    <div className={styles.cart}>
       <h3>Your Cart:</h3>
       <ul>
         {selectedItems.map((item, index) => (
