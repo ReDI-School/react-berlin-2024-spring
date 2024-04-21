@@ -1,6 +1,7 @@
 .cart {
   display: flex;
   align-items: center;
+  justify-content: end;
   gap: 15px;
   position: relative;
 }
@@ -14,6 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .dropDown {
@@ -46,4 +48,14 @@
   padding-bottom: 0;
   margin-bottom: 0;
   border-width: 0;
+}
+
+.clearButton {
+  border: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: navy;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }

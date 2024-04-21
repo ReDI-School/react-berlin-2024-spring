@@ -4,15 +4,19 @@
   justify-content: center;
   align-items: center;
   background-color: lightblue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: var(--nav-height);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   
 }
 
 .navBarContentWrapper {
   max-width: 1080px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding: 20px 40px;
 }
 

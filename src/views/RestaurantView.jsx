@@ -6,6 +6,7 @@ import rawDishes from "../mocks/dishes.json";
 import styles from "./RestaurantView.module.css";
 import NavBar from "../components/NavBar/NavBar.jsx";
 import SearchField from "../components/SearchField/SearchField.jsx";
+import DiscountPopUp from "../components/DiscountPopUp/DiscountPopUp.jsx";
 
 const RestaurantView = () => {
   const [dishes, setDishes] = useState(rawDishes);
@@ -23,9 +24,12 @@ const RestaurantView = () => {
     setSelectedItems(nextItems);
   };
 
-  // create the >>filter<< of your dishes state here
   const handleDishesFilter = (query) => {
-    console.log(query);
+    const filteredDishes = rawDishes.filter((dish) =>
+      dish.name.toLowerCase().includes(query.toLowerCase())
+    );
+
+    setDishes(filteredDishes);
   };
 
   return (
@@ -43,18 +47,26 @@ const RestaurantView = () => {
 
       <div className={styles.restaurantWrapper}>
         <div className={styles.menu}>
-          {dishes.map((dish) => (
-            <MenuItem
-              key={dish.name}
-              name={dish.name}
-              image={dish.image}
-              onClick={handleMenuClick}
-              isSelected={selectedItems.includes(dish.name)}
-            />
-          ))}
+          {dishes.length > 0 ? (
+            dishes.map((dish) => (
+              <MenuItem
+                key={dish.name}
+                name={dish.name}
+                image={dish.image}
+                onClick={handleMenuClick}
+                isSelected={selectedItems.includes(dish.name)}
+              />
+            ))
+          ) : (
+            <p>No dishes found :(</p>
+          )}
         </div>
-        {selectedItems.length >= 3 && <h4>🎉 You unlocked a 10% discount!</h4>}
       </div>
+      {selectedItems.length >= 3 && (
+        <DiscountPopUp>
+          <strong>🎉 You unlocked a 10% discount!</strong>
+        </DiscountPopUp>
+      )}
     </>
   );
 };

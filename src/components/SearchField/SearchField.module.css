@@ -1,3 +1,10 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .search {
   appearance: none;
   background-color: #fff;
@@ -18,5 +25,5 @@
 }
 
 .focusedBorder {
-  border: 1px solid pink;
+  border: 1px solid rgb(0, 172, 184);
 }
