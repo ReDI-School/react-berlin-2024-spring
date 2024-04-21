@@ -1,17 +1,3 @@
-body {
-  color: rgb(11 11 11 / 87%);
-  background-color: white;
-}
-
-.menu {
-  list-style-type: none; /* Remove bullet points */
-  padding: 0; /* Remove default padding */
-  display: flex; /* Use flexbox for better alignment and distribution */
-  flex-wrap: wrap; /* Allow wrapping for multiple items */
-  gap: 20px; /* Space between each menu item/card */
-  justify-content: center; /* Center the cards in the menu container */
-}
-
 .menuItem {
   background-color: #fff; /* Card background color */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow for depth */
@@ -38,11 +24,4 @@ body {
   display: block; /* Ensures no extra space below the image */
   object-fit: cover; /* Cover the entire card with the image prevents to distort image */
   aspect-ratio: 2 / 1; /* Maintain a aspect ratio */
-}
-
-.cart {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 16px 0;
 }

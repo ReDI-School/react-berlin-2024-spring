@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.search {
+  appearance: none;
+  background-color: #fff;
+  border-radius: 9999px;
+  border: 1px solid #fff;
+  outline: none;
+  color: black;
+  padding: 5px 10px;
+  width: 200px;
+
+  &:focus {
+    outline-color: none;
+  }
+}
+
+.mouseEnterBorder {
+  border: 1px solid palevioletred;
+}
+
+.focusedBorder {
+  border: 1px solid rgb(0, 172, 184);
+}
