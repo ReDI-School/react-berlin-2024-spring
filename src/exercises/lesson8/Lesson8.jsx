@@ -1,5 +1,5 @@
-import './styles.css';
-import { Fragment } from 'react';
+import "./styles.css";
+import { Fragment, useState } from "react";
 
 /**
  * INSTRUCTIONS:
@@ -16,12 +16,26 @@ import { Fragment } from 'react';
  */
 
 const Lesson8 = () => {
+  const [text, setText] = useState("");
+  const [inputType, setinputType] = useState("password");
+
+  const clearInput = () => {
+    setText("");
+  };
+
+  const handleInputChange = (e) => {
+    setText(e.target.value);
+  };
+  const showPassword = () => {
+    inputType === "text" ? setinputType("password") : setinputType("text");
+  };
+
   return (
     <Fragment>
       <div className="flex-container">
-        <input type="password" />
-        <button>SHOW</button>
-        <button>CLEAR</button>
+        <input type={inputType} value={text} onChange={handleInputChange} />
+        <button onClick={showPassword}>SHOW</button>
+        <button onClick={clearInput}>CLEAR</button>
       </div>
       <p className="warning">🚨 Must be no more than 10 characters!</p>
     </Fragment>
