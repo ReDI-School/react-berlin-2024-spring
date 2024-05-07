@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Cart from "../components/Cart/Cart.jsx";
 import MenuItem from "../components/MenuItem/MenuItem.jsx";
 import rawDishes from "../mocks/dishes.json";
@@ -9,8 +9,27 @@ import SearchField from "../components/SearchField/SearchField.jsx";
 import DiscountPopUp from "../components/DiscountPopUp/DiscountPopUp.jsx";
 
 const RestaurantView = () => {
-  const [dishes, setDishes] = useState(rawDishes);
+  // const [dishes, setDishes] = useState(rawDishes);
+  const [dishes, setDishes] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
+  const [search, setSearch] = useState("a");
+
+  const fetchDishes = async () => {
+    try {
+      const response = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/search.php?f=${search}`
+      );
+      console.log("response :>> ", response);
+      if (!response.ok) {
+        throw new Error("Something bad happened");
+      }
+      const result = await response.json();
+      console.log("result :>> ", result.meals);
+      setDishes(result.meals);
+    } catch (error) {
+      console.log("error :>> ", error);
+    }
+  };
 
   const handleMenuClick = (name) => {
     let nextItems;
@@ -32,6 +51,10 @@ const RestaurantView = () => {
     setDishes(filteredDishes);
   };
 
+  useEffect(() => {
+    fetchDishes();
+  }, []);
+
   return (
     <>
       <NavBar>
@@ -50,9 +73,9 @@ const RestaurantView = () => {
           {dishes.length > 0 ? (
             dishes.map((dish) => (
               <MenuItem
-                key={dish.name}
-                name={dish.name}
-                image={dish.image}
+                key={dish.idMeal}
+                name={dish.strMeal}
+                image={dish.strMealThumb}
                 onClick={handleMenuClick}
                 isSelected={selectedItems.includes(dish.name)}
               />
