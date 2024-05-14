@@ -7,9 +7,55 @@
  * OPTONALLY: under the Flag, render the follwing information: Symbol of the currency (or currencies) of that country, and the capital (or capitals)
  * */
 
+import { useEffect } from "react";
+import { useState } from "react";
+import styles from "./Lesson13Exercise.module.css";
+import CountryCard from "./CountryCard";
+
 const Lesson13Exercise = () => {
   const URL = "https://restcountries.com/v3.1/all";
-  return <div>Lesson13Exercise</div>;
+
+  const [countries, setCountries] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(null);
+
+  const fetchCountries = async () => {
+    try {
+      const response = await fetch(URL);
+      if (!response.ok) {
+        setIsLoading(false);
+        setErrorMessage("something went wrong");
+        throw new Error("something went wrong");
+      }
+      const result = await response.json();
+      setCountries(result);
+      setIsLoading(false);
+      console.log("result :>> ", result);
+    } catch (error) {
+      console.log("error :>> ", error);
+      setIsLoading(false);
+      setErrorMessage("Problems with the server...");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchCountries();
+  }, []);
+
+  return (
+    <div className={styles.container}>
+      <div>
+        {countries &&
+          countries.map((country, i) => {
+            return <CountryCard country={country} key={i} />;
+          })}
+      </div>
+      {isLoading && <h1>....LOADING...</h1>}
+      {errorMessage && <h2>{errorMessage}</h2>}
+    </div>
+  );
 };
 
 export default Lesson13Exercise;
