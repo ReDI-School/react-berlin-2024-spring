@@ -1,5 +1,5 @@
 import styles from "./Lesson14Example.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const Lesson14Example = () => {
   const [textInputValue, setTextInputValue] = useState("Lesson14");
@@ -8,16 +8,35 @@ export const Lesson14Example = () => {
   const [incrementedNumber, setIncrementedNumber] = useState(0);
   
   // Example no dependencies -- Fires every time the component is rendered
-  // useEffect(() => {});
+  // useEffect(() => {
+  //   //alert('Rendering')
+  // });
 
   // Example empty dependency array -- Fires only once the first time the component is rendered
-  // useEffect...
+  // useEffect(() => {
+  //   console.log('Run just one time');
+  // }, []);
+  // console.log('Rendering');
+  
+  // // Example dependency array with values -- Fires only when the dependencies change
+  // useEffect(() => {
+  //   console.log(`The value is: "${textInputValue} - ${numericInputValue}"`)
+  //   setChangeCount(changeCount + 1);
+  // }, [textInputValue, numericInputValue, changeCount]);
 
-  // Example dependency array with values -- Fires only when the dependencies change
-  // useEffect..
+  // EQUALITY
+  // Objects, Arrays references
 
   // Example with cleanup function
-  // useEffect..
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setIncrementedNumber(n => n + numericInputValue);
+  //   }, 1000);
+
+  //   return () => {
+  //     clearInterval(interval);
+  //   }
+  // }, [numericInputValue]);
 
   return (
     <div className={styles["lesson14-bg"]}>
