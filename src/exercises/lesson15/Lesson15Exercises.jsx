@@ -2,6 +2,11 @@ import styles from "./Lesson15Examples.module.css";
 
 /**
  * Now it's your turn, make the form below a controlled form.
+ * 1. Create the states for the form fields
+ * 2. Create the onChange handlers for the form fields
+ * 3. Update the form fields to be controlled
+ * 4. Update the form submission to use the controlled form fields
+ * 5. Set the submit button to be disabled if the terms are not agreed to
  */
 
 const Lesson15exercise = () => {
