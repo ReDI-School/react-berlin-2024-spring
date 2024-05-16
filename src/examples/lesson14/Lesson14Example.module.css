@@ -1,0 +1,33 @@
+.lesson14-bg {
+    background: slategray;
+    padding: 15px;
+    height: 100vh;
+    font-family: monospace;
+    color: aliceblue;
+    h2 {
+        font-size: 25px;
+        margin: 5px 0;
+    }
+    a {
+        font-size: 25px;
+        margin-left: 15px;
+        display: inline-block;
+    }
+    label, input {
+        font-size: 15px;
+        margin-right: 10px;
+    }
+    p {
+        font-size: 15px;
+        margin: 10px 0;
+    }
+    pre {
+        margin: 15px 0;
+        background-color: #151414bf;
+        color: #cccccc;
+        border: 2px solid rgba(13, 137, 220, 0.893);
+        padding: 5px;
+        min-width: 50vw;
+        border-radius: 8px;
+    }
+}
