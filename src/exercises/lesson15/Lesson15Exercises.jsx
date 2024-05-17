@@ -1,4 +1,4 @@
-import styles from "./Lesson15Examples.module.css";
+import styles from "./Lesson15Exercises.module.css";
 
 /**
  * Now it's your turn, make the form below a controlled form.

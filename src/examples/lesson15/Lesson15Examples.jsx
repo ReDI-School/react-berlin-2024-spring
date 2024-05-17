@@ -5,6 +5,18 @@ const Lesson15Examples = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    const formData = new FormData(event.target);
+
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      country: formData.get("country"),
+      message: formData.get("message"),
+      terms: formData.get("terms"),
+    };
+
+    console.log(data);
   };
 
   return (
