@@ -94,7 +94,7 @@ const RestaurantView = () => {
                 name={dish.strMeal}
                 image={dish.strMealThumb}
                 onClick={handleMenuClick}
-                isSelected={selectedItems.includes(dish.name)}
+                isSelected={selectedItems.includes(dish.strMeal)}
               />
             ))
           ) : (
