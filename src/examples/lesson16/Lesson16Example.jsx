@@ -1,5 +1,5 @@
 import "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link, useNavigate, useParams, Outlet } from "react-router-dom";
 
 import styles from "./Lesson16Example.module.css";
 
@@ -57,6 +57,7 @@ export const Home = () => {
 };
 
 export const ParameterizedRoutes = () => {
+  const navigate = useNavigate();
   return (
     <>
       <h2>Parameterized routes</h2>
@@ -66,8 +67,8 @@ export const ParameterizedRoutes = () => {
       </p>
       <pre>{`<Route path="/users/:id" element={<Users />} />`}</pre>
       <br />
-      <button>Navigate to User 1</button>
-      <button>Navigate to User 2</button>
+      <button onClick={() => navigate('/users/1')}>Navigate to User 1</button>
+      <button onClick={() => navigate('/users/2')}>Navigate to User 2</button>
     </>
   );
 };
@@ -79,6 +80,29 @@ export const About = () => {
 export const Contact = () => {
   return <p>Contact information</p>;
 };
+
+export const Users = () => {
+  const { userId } = useParams();
+
+  const data = {
+    1 : {
+      name: 'Paul',
+      email: 'paul@email.com'
+    },
+    2: {
+      name: 'Frank',
+      email: 'frank@gmail.com'
+    }
+  }
+
+  const user = data[userId];
+
+  if (userId in data) {
+    return <p>User Details: Name - {user.name}  Email - {user.email}</p>;
+  }
+  
+  return <p>Invalid User</p>
+}
 
 export const Lesson16Example = () => {
   return (
@@ -102,14 +126,15 @@ export const Lesson16Example = () => {
         </nav>
         <div>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/nested/*">
+            <Route index element={<Home />} />
+            <Route path="/nested/*" element={<p>Always include me!<Outlet /></p>}>
               <Route path="nested1" element={<p>Nested Route 1</p>} />
-              <Route path="nested2/*">
-                <Route path="" element={<p>Nested Route 2</p>}></Route>
+              <Route path="nested2/*" element={<p>Always include me (too)! <Outlet /></p>}>
+                <Route index element={<p>Nested Route 2</p>}></Route>
                 <Route path="nested3" element={<p>Nested Route 3</p>}></Route>
               </Route>
             </Route>
+            <Route path="/users/:userId" element={<Users />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/parameters" element={<ParameterizedRoutes />} />

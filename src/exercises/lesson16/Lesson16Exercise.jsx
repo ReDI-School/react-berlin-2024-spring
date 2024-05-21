@@ -1,3 +1,10 @@
+import {
+  Link,
+  Route,
+  BrowserRouter as Router,
+  Routes,
+  useNavigate,
+} from "react-router-dom";
 import styles from "../../examples/lesson16/Lesson16Example.module.css";
 
 /**
@@ -21,12 +28,42 @@ import styles from "../../examples/lesson16/Lesson16Example.module.css";
  *    available, e.g. strInstructions, strIngredient1, strIngredient2, etc., and lay out as many details about the meal as possible.
  */
 
-export const Lesson16Exercise = () => {
+const Home = () => {
+  return <p>Here is our homepage</p>;
+};
 
+const About = () => {
+  const navigate = useNavigate();
+  
   return (
-    <div className={styles["lesson16-bg"]}>
-      <p>Lesson 16 exercise</p>
+    <div>
+      <p>About me: Lives in Berlin, plays music, programs, has two cats</p>
+      <button onClick={() => navigate("/")}>Go back home</button>
     </div>
+  );
+};
+
+export const Lesson16Exercise = () => {
+  return (
+    <Router>
+      <div style={{ padding: "15px" }} className={styles["lesson16-bg"]}>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/*" element={<p>404 Not Found</p>} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 
