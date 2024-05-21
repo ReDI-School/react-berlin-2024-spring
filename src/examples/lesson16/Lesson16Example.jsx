@@ -38,7 +38,7 @@ export const Home = () => {
           href="https://reactrouter.com/en/main/hooks/use-navigate"
         >
           useNavigate:
-        </a>{" "}
+        </a>
         Returns a function allowing us to navigate with code
       </p>
       <pre>{`const navigate = useNavigate();`}</pre>
@@ -48,7 +48,7 @@ export const Home = () => {
           href="https://reactrouter.com/en/main/hooks/use-params"
         >
           useParams:
-        </a>{" "}
+        </a>
         Returns an object with values substituted for path templates
       </p>
       <pre>{`const { id } = useParams();`}</pre>
