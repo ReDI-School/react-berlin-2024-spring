@@ -90,11 +90,10 @@ const RestaurantView = () => {
           {dishes.length > 0 ? (
             dishes.map((dish) => (
               <MenuItem
+                dish={dish}
                 key={dish.idMeal}
-                name={dish.strMeal}
-                image={dish.strMealThumb}
                 onClick={handleMenuClick}
-                isSelected={selectedItems.includes(dish.name)}
+                isSelected={selectedItems.includes(dish.strMeal)}
               />
             ))
           ) : (

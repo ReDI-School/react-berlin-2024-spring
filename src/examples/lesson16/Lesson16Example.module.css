@@ -1,0 +1,61 @@
+.lesson16-bg {
+    background: slategray;
+    padding: 0;
+    height: 100vh;
+    font-family: monospace;
+    color: aliceblue;
+
+    h2 {
+        font-size: 20px;
+        margin: 5px 0;
+    }
+
+    a {
+        font-size: 17px;
+        margin-left: 10px;
+        display: inline-block;
+    }
+    & > div {
+        padding: 15px;
+    }
+
+    nav {
+        background-color: #333;
+        padding: 5px 0px;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+    }
+
+    nav ul li a:hover {
+        background-color: #575757;
+        border-radius: 4px;
+    }
+
+    pre {
+        margin: 15px 0;
+        background-color: #151414bf;
+        color: #cccccc;
+        border: 2px solid rgba(13, 137, 220, 0.893);
+        padding: 5px;
+        display: inline-block;
+        padding: 15px;
+        border-radius: 8px;
+    }
+}
