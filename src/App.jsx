@@ -1,13 +1,21 @@
-import "./App.css";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary.jsx";
-import { Lesson16Example } from "./examples/lesson16/Lesson16Example.jsx";
-import Lesson16Exercise from "./exercises/lesson16/Lesson16Exercise.jsx";
+import MenuItemDetails from "./components/MenuItem/MenuItemDetails.jsx";
 import RestaurantView from "./views/RestaurantView.jsx";
 
+import "./App.css";
+
 function App() {
-   //return <Lesson16Example />;
-   //return <Lesson16Exercise />;
-   return <RestaurantView />;
+  return (
+    <Router>
+      <Routes>
+        <Route index element={<RestaurantView />} />
+        <Route path="/meals/:id" element={<MenuItemDetails />} />
+        <Route path="/*" element={<p>404 Page not found</p>} />
+      </Routes>
+    </Router>
+  );
 }
 
 // Wrap App in an ErrorBoundary to help us with development bugs

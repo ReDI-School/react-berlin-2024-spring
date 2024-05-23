@@ -25,3 +25,64 @@
   object-fit: cover; /* Cover the entire card with the image prevents to distort image */
   aspect-ratio: 2 / 1; /* Maintain a aspect ratio */
 }
+
+.menuItemBtnContainer {
+  display: flex;
+}
+
+.menuItemDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.menuItemDetail h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.menuItemDetail h2 {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 20px 0 10px;
+}
+
+.menuItemDetail p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+.menuItemDetail ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menuItemDetail ul li {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+.menuItemDetail button {
+  width: 200px;
+  border-radius: 5px;
+}
+
+.image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.menuItemDetail a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.menuItemDetail a:hover {
+  text-decoration: underline;
+}
