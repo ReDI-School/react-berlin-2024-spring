@@ -5,8 +5,12 @@ import MenuItemDetails from "./components/MenuItem/MenuItemDetails.jsx";
 import RestaurantView from "./views/RestaurantView.jsx";
 
 import "./App.css";
+import Lesson17Example from "./examples/lesson17/Lesson17Example.jsx";
+import Lesson17Exercise from "./exercises/lesson17/Lesson17Exercise.jsx";
 
 function App() {
+  return <Lesson17Example />
+  // return <Lesson17Exercise />
   return (
     <Router>
       <Routes>
