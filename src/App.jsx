@@ -3,14 +3,15 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary.jsx";
 import MenuItemDetails from "./components/MenuItem/MenuItemDetails.jsx";
 import RestaurantView from "./views/RestaurantView.jsx";
-import Lesson17Example from "./examples/lesson17/Lesson17Example.jsx";
-import Lesson17Exercise from "./exercises/lesson17/Lesson17Exercise.jsx";
+//import Lesson17Example from "./examples/lesson17/Lesson17Example.jsx";
+//import Lesson17Exercise from "./exercises/lesson17/Lesson17Exercise.jsx";
+import ProjectDeploy from "./views/ProjectDeploy.jsx";
 
 import "./App.css";
 
-
 function App() {
-  return <Lesson17Example />
+  return <ProjectDeploy />;
+  // return <Lesson17Example />
   // return <Lesson17Exercise />
   return (
     <Router>
